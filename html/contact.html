@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | Bihar BHRAMAN</title>
+
+  <meta name="description"
+<<<<<<< HEAD
+    content="Contact Bihar BHRAMAN to plan your journey across heritage, cuisine, and festivals." />
+=======
+    content="Contact Bihar Bharman to plan your journey across heritage, cuisine, and festivals." />
+>>>>>>> 5d745a3e69f19b73d1e76df233167b19e31c985c
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#f6efe6" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="../css/contact.css">
+  <link rel="stylesheet" href="../css/theme.css">
+  <script src="../js/site.js" defer></script>
+  <script src="../js/contactphp.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <script>
+(function() {
+    function escapeHtml(str) {
+        if (!str) return '';
+        return str.replace(/[&<>]/g, function(m) {
+            if (m === '&') return '&amp;';
+            if (m === '<') return '&lt;';
+            if (m === '>') return '&gt;';
+            return m;
+        });
+    }
+
+    function showGlassToast(message, isSuccess) {
+        const icon = isSuccess ? 'fa-check-circle' : 'fa-exclamation-circle';
+        const gradient = isSuccess 
+            ? 'linear-gradient(135deg, rgba(72,187,120,0.95), rgba(56,161,105,0.95))'
+            : 'linear-gradient(135deg, rgba(245,101,101,0.95), rgba(220,70,70,0.95))';
+        
+        const toast = document.createElement('div');
+        toast.innerHTML = `
+            <div class="toast-icon"><i class="fas ${icon}"></i></div>
+            <div class="toast-message">${escapeHtml(message)}</div>
+            <button class="toast-close">&times;</button>
+        `;
+        Object.assign(toast.style, {
+            position: 'fixed', bottom: '30px', right: '30px', maxWidth: '380px',
+            background: gradient, backdropFilter: 'blur(12px)', borderRadius: '1rem',
+            padding: '1rem 1.25rem', display: 'flex', alignItems: 'center', gap: '1rem',
+            boxShadow: '0 15px 35px rgba(0,0,0,0.3)', zIndex: '10000',
+            fontFamily: "'Poppins', sans-serif", border: '1px solid rgba(255,255,255,0.3)',
+            opacity: '0', transform: 'translateX(420px)',
+            transition: 'all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55)'
+        });
+        
+        if (!document.getElementById('toast-styles')) {
+            const style = document.createElement('style');
+            style.id = 'toast-styles';
+            style.textContent = `
+                .toast-icon { font-size: 1.8rem; color: white; }
+                .toast-message { flex:1; color:white; font-size:0.95rem; font-weight:500; }
+                .toast-close { background:none; border:none; color:white; font-size:1.6rem; cursor:pointer; width:28px; height:28px; border-radius:50%; }
+                .toast-close:hover { background:rgba(255,255,255,0.2); }
+            `;
+            document.head.appendChild(style);
+        }
+        
+        document.body.appendChild(toast);
+        requestAnimationFrame(() => {
+            toast.style.opacity = '1';
+            toast.style.transform = 'translateX(0)';
+        });
+        
+        let timeout = setTimeout(() => close(toast), 6000);
+        toast.querySelector('.toast-close').onclick = () => { clearTimeout(timeout); close(toast); };
+        toast.onmouseenter = () => clearTimeout(timeout);
+        toast.onmouseleave = () => { timeout = setTimeout(() => close(toast), 2000); };
+        
+        function close(t) {
+            t.style.opacity = '0';
+            t.style.transform = 'translateX(420px)';
+            setTimeout(() => t.remove(), 400);
+        }
+    }
+    
+    const urlParams = new URLSearchParams(window.location.search);
+    const success = urlParams.get('contact_success');
+    const error = urlParams.get('contact_error');
+    
+    if (success || error) {
+        // Clean URL
+        window.history.replaceState({}, document.title, window.location.pathname);
+        showGlassToast(decodeURIComponent(success || error), !!success);
+    }
+})();
+</script>
+  <header class="site-header" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="brand">
+        <i class="fas fa-map-marked-alt"></i>
+        BIHAR BHRAMAN
+      </a>
+      <nav class="nav-links" id="primary-nav" aria-label="Primary">
+        <a href="/index.html">Home</a>
+        <a href="/html/history.html">About</a>
+        <a href="/html/destinations.html">Explore</a>
+        <a href="/html/cuisine.html">Cuisine</a>
+        <a href="/html/festivals.html">Festivals</a>
+        <a href="/html/blogs.html">Stories</a>
+        <a href="/html/contact.html" class="active" aria-current="page">Support</a>
+      </nav>
+      <div class="nav-actions">
+<<<<<<< HEAD
+        <a href="/html/plan-trip.html" class="nav-btn">Ai Planner</a>
+=======
+        <a href="/html/plan-trip.html" class="nav-btn">Plan Now</a>
+>>>>>>> 5d745a3e69f19b73d1e76df233167b19e31c985c
+        <button class="mobile-menu-btn" id="mobileMenuBtn" type="button" aria-label="Open navigation"
+          aria-expanded="false" aria-controls="primary-nav">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="contact-hero">
+      <div class="hero-bg"></div>
+      <div class="hero-content">
+        <span class="hero-tag"><i class="fas fa-envelope"></i> Contact</span>
+<<<<<<< HEAD
+        <h1>Let’s Plan the trip</h1>
+=======
+        <h1>Let’s Plan Your Bihar Journey</h1>
+>>>>>>> 5d745a3e69f19b73d1e76df233167b19e31c985c
+        <p>Share your travel goals, and we’ll help you craft a meaningful itinerary across heritage sites, food trails,
+          and festivals.</p>
+      </div>
+    </section>
+
+    <section class="section-padding">
+      <div class="contact-shell">
+        <div class="contact-card">
+          <h3>Reach Us</h3>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+            <div>
+              <h4>Phone</h4>
+              <p>+91 123 456 7890</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <h4>Email</h4>
+              <p>info@biharBHRAMAN.com</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <h4>Office</h4>
+              <p>Patna, Bihar, India</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-clock"></i></div>
+            <div>
+              <h4>Hours</h4>
+              <p>Mon-Sat, 9:00 AM - 6:00 PM</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="form-card">
+            <h2>Send a Message</h2>
+            <p>We usually respond within 24-48 hours.</p>
+            <form class="contact-form" action="/php/contactfromres.php" method="POST">
+              <div class="field">
+                <label for="name">Full Name</label>
+                <input id="name" name="name" type="text" placeholder="Your Name" required>
+              </div>
+              <div class="field">
+                <label for="email">Email Address</label>
+                <input id="email" name="email" type="email" placeholder="you@example.com" required>
+              </div>
+              <div class="field">
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" type="tel" placeholder="+91 987 654 3210">
+              </div>
+              <div class="field">
+                <label for="subject">Subject</label>
+                <input id="subject" name="subject" type="text" placeholder="Trip inquiry">
+              </div>
+              <div class="field full">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Tell us about your trip goals"
+                  required></textarea>
+              </div>
+              <button class="submit-btn" type="submit">Send Message</button>
+            </form>
+          </div>
+
+          <div class="map-card">
+            <div class="map-frame">
+              <iframe title="Patna, Bihar map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps?q=Patna%2C%20Bihar%2C%20India&output=embed">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding faq-section">
+      <div class="u-inline-3">
+        <span class="u-inline-4">FAQ</span>
+        <h2 class="u-inline-5">Need Quick Answers?</h2>
+        <p>Here are the most common questions travelers ask before planning their Bihar journey.</p>
+
+        <div class="faq-grid">
+          <details class="faq-card">
+            <summary>How early should I book a guided trip?</summary>
+            <p>We recommend booking at least 2-3 weeks in advance, especially during festival seasons.</p>
+          </details>
+          <details class="faq-card">
+            <summary>Can you customize an itinerary for families?</summary>
+            <p>Yes. We tailor routes based on age groups, mobility, and interest areas like heritage, food, or
+              festivals.</p>
+          </details>
+          <details class="faq-card">
+            <summary>Do you provide transport and accommodation?</summary>
+            <p>We can suggest trusted local partners for transport and stays based on your budget and style.</p>
+          </details>
+          <details class="faq-card">
+            <summary>What is the best season to visit Bihar?</summary>
+            <p>October to March offers pleasant weather and the most festival activity.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="brand u-inline-6">
+<<<<<<< HEAD
+          <i class="fas fa-map-marked-alt" style="margin-right: 10px;"></i> BIHAR BHRAMAN
+=======
+          <i class="fas fa-map-marked-alt" style="margin-right: 10px;"></i> BIHAR BHARMAN
+>>>>>>> 5d745a3e69f19b73d1e76df233167b19e31c985c
+        </div>
+        <p class="u-inline-8">Preserving heritage for future generations.</p>
+        <h4>Social Media</h4>
+        <div class="socials">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../history.html">About</a></li>
+          <li><a href="../destinations.html">Explore</a></li>
+          <li><a href="../cuisine.html">Cuisine</a></li>
+          <li><a href="../festivals.html">Festivals</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Policies</h4>
+        <ul class="footer-links">
+          <li><a href="../privacy.html">Privacy Policy</a></li>
+          <li><a href="../terms.html">Terms of Use</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+          <li><a href="../disclaimer.html">Disclaimer</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Newsletter</h4>
+        <p class="footer-text footer-text--spaced">Subscribe to get updates on heritage sites and events.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Your Email" required>
+          <button type="submit"><i class="fas fa-paper-plane"></i></button>
+        </form>
+      </div>
+
+    </div>
+    <div class="text-center u-inline-21">
+<<<<<<< HEAD
+      &copy; 2025 Bihar BHRAMAN. All Rights Reserved.
+=======
+      &copy; 2025 Bihar Bharman. All Rights Reserved.
+>>>>>>> 5d745a3e69f19b73d1e76df233167b19e31c985c
+    </div>
+  </footer>
+
+  <script>
+
+    const contactForm = document.getElementById('contactForm');
+    const formStatus = document.getElementById('formStatus');
+
+    if (contactForm) {
+      contactForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const submitButton = contactForm.querySelector('.submit-btn');
+        submitButton.disabled = true;
+        submitButton.textContent = 'Sending...';
+
+        setTimeout(() => {
+          submitButton.disabled = false;
+          submitButton.textContent = 'Send Message';
+          formStatus.textContent = 'Thank you! Your message has been received. We will get back to you soon.';
+          formStatus.classList.add('visible');
+          contactForm.reset();
+        }, 800);
+      });
+    }
+  </script>
+</body>
+
+</html>
